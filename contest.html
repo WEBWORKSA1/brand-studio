@@ -1,0 +1,32 @@
+---
+title: "Monthly Brand Design Contest — Win Cash Prizes | Brand.Studio"
+description: "Enter the free Brand.Studio monthly design contest. One brief, a wordmark and palette, community voting plus judges. Cash prizes, featured case studies and studio introductions."
+---
+<section class="page-hero"><div class="wrap grid g2" style="align-items:end">
+<div><span class="eyebrow">Monthly contest · <span data-contest-month></span></span><h1>The Brand Brief Challenge</h1><p class="lead">One fictional brand, one month, one shot. Design a wordmark and five-colour palette for the brief. Free to enter. Real prizes.</p></div>
+<div class="card"><span class="eyebrow">This month’s brief</span><h2 data-contest-theme style="color:var(--accent);margin-bottom:12px">Coffee roaster rebrand</h2><div class="countdown" data-countdown><div><b>0</b><small>days</small></div><div><b>00</b><small>hrs</small></div><div><b>00</b><small>min</small></div><div><b>00</b><small>sec</small></div></div><p class="tiny" style="margin-top:10px">Entries close <span data-contest-end></span>. Next month: <b data-contest-next></b>.</p></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap grid g4">
+<div class="card"><span class="tag hot">1st</span><h3 style="margin-top:12px">$250 cash</h3><p>Featured case study, homepage spotlight and introductions to hiring partners.</p></div>
+<div class="card"><span class="tag">2nd</span><h3 style="margin-top:12px">$100 cash</h3><p>Featured in the newsletter and on the winners’ wall.</p></div>
+<div class="card"><span class="tag">3rd</span><h3 style="margin-top:12px">$50 cash</h3><p>Featured on the winners’ wall.</p></div>
+<div class="card"><span class="tag">Community</span><h3 style="margin-top:12px">People’s choice</h3><p>Most votes wins a portfolio review from a partner studio.</p></div>
+</div><div class="wrap"><p class="tiny" style="margin-top:12px">Prize pool is funded by sponsors and <a href="/support.html">supporters</a>. Amounts may increase when sponsored; any change is announced before the month starts.</p></div></section>
+<section class="section-alt"><div class="wrap grid g2" style="align-items:start">
+<div class="prose"><h2>How it works</h2><ol><li><b>Read the brief</b> shown above. It rotates automatically on the 1st of each month.</li><li><b>Design</b> a wordmark (with or without a symbol) and a five-colour palette. You can use the free <a href="/tools/logo-maker.html">wordmark maker</a> and <a href="/tools/palette.html">palette builder</a> or any tool you like.</li><li><b>Upload</b> your work to a public link (Behance, Dribbble, Google Drive, Figma) and submit the form.</li><li><b>Voting</b> opens the first week of the following month. Judges’ score counts 70%, community vote 30%.</li></ol>
+<h3>Judging criteria</h3><ul><li>Fit with the brief (30%)</li><li>Originality (25%)</li><li>Craft and legibility (25%)</li><li>Palette and accessibility (20%)</li></ul>
+<h3>Rules (short version)</h3><ul><li>Free to enter; one entry per person per month; 18+ or with guardian consent.</li><li>Work must be 100% original. No AI-generated final artwork, no traced or copied logos, no third-party trademarks.</li><li>You keep your copyright. You grant Brand.Studio a licence to display your entry with credit.</li><li>Void where prohibited. Prizes paid by bank transfer or PayPal within 30 days. Full terms in our <a href="/terms.html">Terms</a>.</li></ul></div>
+<form class="form-card js-form" data-subject="Contest entry" data-auto="contest" data-ok="Entry received — good luck! We’ll email you when voting opens.">
+<h3>Submit your entry</h3><input type="hidden" name="form" value="Contest entry"><input type="hidden" name="contest_month" value="" id="ctMonth">
+<div class="row"><div class="field"><label for="ct-name">Name</label><input id="ct-name" name="name" required></div><div class="field"><label for="ct-email">Email</label><input id="ct-email" name="email" type="email" required></div></div>
+<div class="field"><label for="ct-link">Link to your entry</label><input id="ct-link" name="entry_link" type="url" required placeholder="https://"></div>
+<div class="field"><label for="ct-hex">Your five colours (HEX)</label><input id="ct-hex" name="palette" placeholder="#1F3A5F, #3E7CB1, …" required></div>
+<div class="field"><label for="ct-why">Rationale (max 400 characters)</label><textarea id="ct-why" name="rationale" maxlength="400" required></textarea></div>
+<div class="field"><label for="ct-country">Country</label><input id="ct-country" name="country" required></div>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="check" style="margin-bottom:10px"><input type="checkbox" name="original" value="yes" required> <span>This is my original work and uses no third-party trademarks.</span></label>
+<label class="check" style="margin-bottom:14px"><input type="checkbox" name="consent" value="yes" required> <span>I accept the contest rules and <a href="/privacy.html">Privacy Policy</a>.</span></label>
+<button class="btn btn-accent btn-block" type="submit">Submit entry</button><div class="form-msg" role="status"></div></form>
+</div></section>
+<section><div class="wrap band"><div><span class="eyebrow">Sponsor the contest</span><h2>Put your brand in front of designers and founders</h2><p>Sponsors fund the prize pool and get logo placement on the brief, the newsletter and the winners’ announcement.</p></div><div><a class="btn btn-accent btn-block" href="/advertise.html#contest">Sponsor a month</a></div></div></section>
+<script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('[data-contest-month]'),t=document.querySelector('[data-contest-theme]'),i=document.getElementById('ctMonth');if(i)i.value=(m?m.textContent:'')+' — '+(t?t.textContent:'')});</script>
