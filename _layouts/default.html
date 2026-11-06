@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html','' }}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#F4F0E8">
+<meta property="og:type" content="{% if page.article %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="Brand.Studio">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html','' }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/icon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=1">
+<script>try{var t=localStorage.getItem('bs-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://brand.studio/#org","name":"Brand.Studio","url":"https://brand.studio/","logo":"https://brand.studio/assets/img/icon-512.png"},{"@type":"WebSite","@id":"https://brand.studio/#site","url":"https://brand.studio/","name":"Brand.Studio","publisher":{"@id":"https://brand.studio/#org"}}]}</script>
+{% if page.schema %}<script type="application/ld+json">{{ page.schema }}</script>{% endif %}
+{% if page.article %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ page.h1 | default: page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"{{ page.date_pub }}","dateModified":"{{ page.date_mod | default: page.date_pub }}","author":{"@type":"Organization","name":"Brand.Studio Editorial"},"publisher":{"@id":"https://brand.studio/#org"},"mainEntityOfPage":"{{ site.url }}{{ page.url }}"}</script>{% endif %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><div class="wrap"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership <span aria-hidden="true">→</span></a></div></div>
+<header class="site-header">
+<div class="wrap nav">
+<a class="logo" href="/" aria-label="Brand.Studio home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 8h8.2c3.6 0 5.6 1.7 5.6 4.3 0 1.8-1 3-2.6 3.5 2 .4 3.3 1.9 3.3 4 0 3-2.3 4.7-6.2 4.7H9z" fill="var(--paper)"/><circle cx="24.5" cy="23.5" r="2.5" fill="var(--accent)"/></svg></span><span class="word">Brand<b>.</b>Studio</span></a>
+<nav id="menu" aria-label="Main">
+<a href="/studio.html">Studio</a>
+<div class="dd"><button type="button" class="dd-btn" aria-expanded="false">Tools <span aria-hidden="true">▾</span></button>
+<div class="dd-menu">
+<a href="/tools/name-generator.html"><b>Name generator</b><small>Brandable names + domain ideas</small></a>
+<a href="/tools/palette.html"><b>Palette builder</b><small>Colours with contrast checks</small></a>
+<a href="/tools/fonts.html"><b>Font pairing</b><small>Free Google Font pairs</small></a>
+<a href="/tools/logo-maker.html"><b>Wordmark maker</b><small>Export SVG &amp; PNG</small></a>
+<a href="/tools/slogan.html"><b>Slogan generator</b><small>Taglines by tone</small></a>
+<a href="/tools/archetype-quiz.html"><b>Archetype quiz</b><small>Find your brand personality</small></a>
+<a href="/tools/brand-audit.html"><b>Brand audit</b><small>Score your brand in 3 min</small></a>
+<a href="/tools/brand-guide.html"><b>Brand guide builder</b><small>One-page PDF style guide</small></a>
+<a href="/tools/trademark-check.html"><b>Trademark search launcher</b><small>USPTO, CIPO, EUIPO, WIPO</small></a>
+</div></div>
+<a href="/guides/">Guides</a>
+<a href="/resources.html">Resources</a>
+<a href="/videos.html">Videos</a>
+<a href="/news.html">News</a>
+<a href="/contest.html">Contest</a>
+<a class="btn btn-sm btn-accent" href="/get-matched.html">Get matched</a>
+</nav>
+<div class="nav-actions"><button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle dark mode"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg></button><button id="burger" class="icon-btn burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div>
+</div>
+</header>
+<main id="main">
+{{ content }}
+</main>
+<section class="cta-strip"><div class="wrap cta-strip-in"><div><span class="eyebrow">Free · 60 seconds</span><h2>Want pros to build it for you?</h2><p>Tell us what you need. We match you with up to 3 vetted brand studios and freelancers that fit your budget.</p></div><a class="btn btn-accent btn-lg" href="/get-matched.html">Get matched free →</a></div></section>
+<footer class="site-footer">
+<div class="wrap foot-grid">
+<div class="foot-brand"><a class="logo" href="/"><span class="word">Brand<b>.</b>Studio</span></a><p>The free, open studio for founders who want a real brand — named, designed and documented — without guesswork.</p>
+<form class="js-form news-form" data-subject="Newsletter signup" data-auto="newsletter" data-ok="You're in. Watch your inbox for the Friday brand brief."><label class="sr" for="nl-email">Email</label><input id="nl-email" type="email" name="email" placeholder="you@company.com" required autocomplete="email"><input type="hidden" name="form" value="Newsletter"><input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn btn-accent" type="submit">Subscribe</button><div class="form-msg" role="status"></div></form><p class="tiny">Weekly brand brief. One email, no spam, unsubscribe any time.</p></div>
+<div><h4>Tools</h4><a href="/tools/name-generator.html">Name generator</a><a href="/tools/palette.html">Palette builder</a><a href="/tools/fonts.html">Font pairing</a><a href="/tools/logo-maker.html">Wordmark maker</a><a href="/tools/slogan.html">Slogans</a><a href="/tools/archetype-quiz.html">Archetype quiz</a><a href="/tools/brand-audit.html">Brand audit</a><a href="/tools/brand-guide.html">Brand guide builder</a><a href="/tools/trademark-check.html">Trademark search</a></div>
+<div><h4>Learn</h4><a href="/guides/">All guides</a><a href="/glossary.html">Branding glossary</a><a href="/resources.html">Resource directory</a><a href="/videos.html">Video library</a><a href="/news.html">Design news</a><a href="/templates.html">Free templates</a></div>
+<div><h4>Work with us</h4><a href="/get-matched.html">Get matched</a><a href="/partners.html">List your studio</a><a href="/careers.html">Talent &amp; careers</a><a href="/contest.html">Monthly contest</a><a href="/advertise.html">Advertise / sponsor</a><a href="/support.html">Support us</a></div>
+<div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/cookies.html">Cookies</a><a href="/disclaimer.html">Disclaimer</a><a href="/trademark.html">Trademark &amp; copyright</a><a href="/editorial-policy.html">Editorial policy</a></div>
+</div>
+<div class="wrap foot-legal"><p><b>Trademark &amp; copyright notice:</b> Brand.Studio is an independent publication operated by Webworks Media. It is not affiliated with, endorsed by or sponsored by any company, agency, product or service named "BrandStudio", "Brand Studio" or similar. Third-party names and logos mentioned belong to their respective owners and are used for identification only. <a href="/trademark.html">Read the full disclosure</a>.</p><p>© <span class="year">2026</span> Brand.Studio · Content licensed for personal use · Tools run in your browser — your work stays on your device.</p></div>
+</footer>
+<div id="cookie" class="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice"><p>We use cookies for ads (Google AdSense), analytics and to remember your settings. Google and its partners may use cookies to personalise ads. <a href="/cookies.html">Learn more</a>.</p><div><button class="btn btn-sm btn-ghost" data-cookie="essential" type="button">Essential only</button><button class="btn btn-sm btn-accent" data-cookie="all" type="button">Accept all</button></div></div>
+<div id="exitModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="exitTitle" hidden><div class="modal-card"><button class="modal-x" type="button" data-close aria-label="Close">×</button><span class="eyebrow">Free download</span><h3 id="exitTitle">The 27-point Brand Launch Checklist</h3><p>Everything to lock before you launch: name, trademark, domain, logo files, colour codes, voice and guideline basics.</p><form class="js-form" data-subject="Checklist request" data-auto="checklist" data-ok="Sent! Your checklist is on its way — and it's also on screen below." data-reveal="/templates.html#checklist"><input type="hidden" name="form" value="Exit checklist"><label class="sr" for="ex-email">Email</label><input id="ex-email" type="email" name="email" placeholder="you@company.com" required><input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn btn-accent btn-block" type="submit">Send me the checklist</button><div class="form-msg" role="status"></div></form><p class="tiny">No spam. Unsubscribe any time.</p></div></div>
+<script src="/assets/js/main.js?v=1" defer></script>
+{% if page.js %}<script src="/assets/js/{{ page.js }}?v=1" defer></script>{% endif %}
+</body>
+</html>
