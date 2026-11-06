@@ -1,0 +1,44 @@
+---
+title: "Brand Archetype Quiz — Find Your Brand Personality in 2 Minutes | Brand.Studio"
+description: "Answer 12 quick questions to discover your brand archetype, with matching voice, colour direction and words. Based on the 12 classic brand archetypes."
+js: tools.js
+---
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Tool · Personality</span><h1>Brand archetype quiz</h1><p class="lead">Twelve questions, two minutes. Discover the personality your brand is built around — and the voice, colours and words that come with it.</p></div></section>
+<section style="padding-top:0"><div class="wrap" style="max-width:820px" id="quizTool">
+<div class="form-card">
+<div class="progress"><i id="quizBar"></i></div>
+<div id="quizQs"></div>
+<button class="btn btn-ghost btn-sm" id="quizBack" type="button">← Back</button>
+<div id="quizResult" hidden>
+<span class="eyebrow">Your primary archetype</span>
+<div class="result-big" id="qrName"></div>
+<p class="lead" id="qrDesc" style="margin-top:14px"></p>
+<div class="grid g2" style="margin:22px 0">
+<div class="card"><h3>Voice</h3><p id="qrVoice"></p><p><b>Your three words:</b> <span id="qrWords"></span></p></div>
+<div class="card"><h3>Colour direction</h3><div class="swatches" id="qrCols" style="margin-bottom:10px"></div><p class="tiny">Click a swatch to copy. Starting point only — build your full system in the <a href="/tools/palette.html">palette builder</a>.</p></div>
+<div class="card"><h3>Seen in</h3><p id="qrEx"></p></div>
+<div class="card"><h3>Secondary influence</h3><p id="qrSec" style="font:700 1.3rem var(--serif)"></p><p class="tiny">Most strong brands blend a primary and a secondary archetype.</p></div>
+</div>
+<div class="band" style="padding:26px">
+<div><h3>Get your full archetype report</h3><p class="muted" style="margin:0">Messaging examples, words to use and avoid, imagery direction and three brands to study — free by email.</p></div>
+<form class="js-form" id="quizLead" data-subject="Archetype report request" data-ok="Done — your report is on its way. Check your inbox (and spam) in a few minutes.">
+<input type="hidden" name="form" value="Archetype quiz">
+<div class="field"><label for="qlName">First name</label><input id="qlName" name="name" required autocomplete="given-name"></div>
+<div class="field"><label for="qlEmail">Email</label><input id="qlEmail" name="email" type="email" required autocomplete="email"></div>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="check" style="margin-bottom:12px"><input type="checkbox" name="consent" value="yes" required> <span>Send me the report and the weekly brand brief. <a href="/privacy.html">Privacy</a>.</span></label>
+<button class="btn btn-accent btn-block" type="submit">Email my report</button><div class="form-msg" role="status"></div></form>
+</div>
+<div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap"><button class="btn btn-ghost btn-sm" id="quizRetry" type="button">Retake quiz</button><a class="btn btn-ink btn-sm" href="/studio.html">Open my Studio</a></div>
+</div>
+</div>
+</div></section>
+<div class="wrap"><div class="ad-slot"></div></div>
+<section class="section-alt"><div class="wrap prose" style="max-width:860px">
+<h2>What are brand archetypes?</h2>
+<p>Brand archetypes are twelve recurring character types — the Hero, the Sage, the Explorer, the Creator, the Caregiver, the Ruler, the Magician, the Outlaw, the Lover, the Jester, the Everyday Friend and the Innocent. The framework adapts Carl Jung’s idea of universal characters to marketing, popularised by Margaret Mark and Carol Pearson’s book <i>The Hero and the Outlaw</i>.</p>
+<p>They’re useful because they give a team a shared shortcut. Saying “we’re a Sage with a touch of Jester” instantly rules out certain words, images and colours, and makes hundreds of small decisions consistent.</p>
+<h3>How to use your result</h3>
+<ul><li><b>Write a voice chart.</b> Three adjectives, each with “this, not that” — e.g. <i>confident, not arrogant</i>.</li><li><b>Brief your designer.</b> Share your archetype and secondary influence with anyone creating visuals.</li><li><b>Audit your copy.</b> Read your homepage aloud. Does it sound like your archetype?</li></ul>
+<p>Archetypes are a guide, not a cage. Use them to sharpen choices, not to copy the brands that share yours. Next: put your voice into words with the <a href="/tools/slogan.html">tagline generator</a>.</p>
+</div></section>
