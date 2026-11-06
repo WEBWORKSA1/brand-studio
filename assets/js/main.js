@@ -164,7 +164,16 @@
 
   /* ---------- Auto-updated design news (data/news.json is refreshed by a scheduled GitHub Action) ---------- */
   var nl=$$('[data-news]');
-  function getNews(){return fetch('https://raw.githubusercontent.com/WEBWORKSA1/brand-studio/main/data/news.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(!d.items||!d.items.length)throw 0;return d}).catch(function(){return fetch('/data/news.json',{cache:'no-cache'}).then(function(r){return r.json()})})}
+  var LIVE=[['Creative Bloq','https://www.creativebloq.com/feeds/all',1],['Dezeen','https://www.dezeen.com/design/feed/',0],['Logo Design Love','https://www.logodesignlove.com/feed',0],['Smashing Magazine','https://www.smashingmagazine.com/feed/',1]];
+  var KW=/brand|logo|identity|rebrand|typograph|font|packag|design|colou?r|naming/i;
+  function liveNews(){
+    var c=null;try{c=JSON.parse(store('bs-news')||'null')}catch(e){}
+    if(c&&c.d&&c.d.items&&c.d.items.length&&Date.now()-c.t<216e5)return Promise.resolve(c.d);
+    return Promise.all(LIVE.map(function(f){return fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(f[1])).then(function(r){return r.json()}).then(function(j){return (j.items||[]).filter(function(it){return it.title&&it.link&&(!f[2]||(KW.test(it.title)&&!/\/deals?\//.test(it.link)))}).map(function(it){return {title:it.title,link:String(it.link).replace(/"/g,'%22'),source:f[0],date:it.pubDate?it.pubDate.replace(' ','T')+'Z':null}})}).catch(function(){return []})}))
+      .then(function(arr){var items=[].concat.apply([],arr).sort(function(a,b){return (b.date||'')>(a.date||'')?1:-1});var d={updated:new Date().toISOString(),items:items.slice(0,60)};if(items.length)store('bs-news',JSON.stringify({t:Date.now(),d:d}));return d});
+  }
+  /* 1) headlines committed by the daily GitHub Action; 2) live feeds via rss2json, cached 6h per visitor */
+  function getNews(){return fetch('https://raw.githubusercontent.com/WEBWORKSA1/brand-studio/main/data/news.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(!d.items||!d.items.length)throw 0;return d}).catch(liveNews)}
   if(nl.length){getNews().then(function(d){
     nl.forEach(function(box){var lim=+box.getAttribute('data-news')||12,items=(d.items||[]).slice(0,lim);
       if(!items.length){box.innerHTML='<p class="muted">Fresh headlines load here automatically every day. Check back shortly.</p>';return}
