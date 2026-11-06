@@ -1,0 +1,10 @@
+title: "Brand.Studio — Free Brand Building Studio"
+description: "Free tools, guides and expert matching to name, design and launch a brand: name generator, palette and font tools, logo maker, brand audit and brand guide builder."
+url: "https://brand.studio"
+baseurl: ""
+lang: en
+exclude: [README.md, BUILD-PROMPTS.md, RESEARCH.md, scripts, LICENSE-CONTENT.md]
+include: [.well-known]
+defaults:
+  - scope: {path: ""}
+    values: {layout: default}

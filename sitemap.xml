@@ -1,0 +1,8 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for p in site.html_pages %}{% unless p.sitemap == false %}<url><loc>{{ site.url }}{{ p.url | replace: 'index.html','' }}</loc><lastmod>{{ p.date_mod | default: p.date_pub | default: site.time | date: "%Y-%m-%d" }}</lastmod><priority>{% if p.url == '/' or p.url == '/index.html' %}1.0{% elsif p.url contains '/tools/' or p.url contains 'get-matched' or p.url contains 'studio' %}0.9{% elsif p.url contains '/guides/' %}0.8{% else %}0.6{% endif %}</priority></url>
+{% endunless %}{% endfor %}</urlset>
