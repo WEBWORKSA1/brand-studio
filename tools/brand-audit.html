@@ -1,0 +1,36 @@
+---
+title: "Free Brand Audit — Score Your Brand Across 8 Pillars | Brand.Studio"
+description: "Take a 3-minute brand audit. Score positioning, name, visual identity, voice, website, consistency, experience and measurement, then get a prioritised fix list."
+js: tools.js
+---
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Tool · Diagnosis</span><h1>Free brand audit</h1><p class="lead">24 yes-or-no questions across the eight pillars every strong brand gets right. Your score updates as you go; your fix list appears at the end.</p></div></section>
+<section style="padding-top:0"><div class="wrap tool-shell" id="auditTool" style="grid-template-columns:1fr 320px">
+<div><div id="auditQs"></div><button class="btn btn-accent btn-lg btn-block" id="auGo" type="button">See my results →</button>
+<div id="auResult" hidden style="margin-top:28px">
+<div class="card"><span class="eyebrow">Your result</span><h2 id="auLabel"></h2><div id="auBars" style="margin:18px 0"></div><h3>Fix these first</h3><ol id="auFixes"></ol></div>
+<div class="band" style="margin-top:18px;padding:28px">
+<div><span class="eyebrow">Free expert review</span><h3>Get a human second opinion</h3><p class="muted" style="margin:0">Send your score and website. A brand strategist from our partner network replies with three specific recommendations — free, within 2 business days.</p></div>
+<form class="js-form" id="auditLead" data-subject="Brand audit review request" data-auto="audit" data-ok="Received! Expect your three recommendations within 2 business days.">
+<input type="hidden" name="form" value="Brand audit">
+<div class="field"><label for="alName">Name</label><input id="alName" name="name" required autocomplete="name"></div>
+<div class="field"><label for="alEmail">Work email</label><input id="alEmail" name="email" type="email" required autocomplete="email"></div>
+<div class="field"><label for="alSite">Website</label><input id="alSite" name="website" type="url" placeholder="https://" required></div>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="check" style="margin-bottom:12px"><input type="checkbox" name="consent" value="yes" required> <span>I agree to be contacted about my review. <a href="/privacy.html">Privacy</a>.</span></label>
+<button class="btn btn-accent btn-block" type="submit">Request my free review</button><div class="form-msg" role="status"></div></form>
+</div></div>
+</div>
+<aside class="panel" style="position:sticky;top:96px"><span class="eyebrow">Live score</span><div class="result-big"><span id="auPct">0</span><small style="font-size:1.2rem;color:var(--muted)">/100</small></div><div class="meter" style="margin:14px 0 8px"><i id="auMeter"></i></div><p class="tiny" id="auAns">0 answered</p><p class="tiny">Your answers never leave your browser unless you request a review.</p></aside>
+</div></section>
+<div class="wrap"><div class="ad-slot"></div></div>
+<section class="section-alt"><div class="wrap prose" style="max-width:860px">
+<h2>How to read your score</h2>
+<table><tr><th>Score</th><th>What it means</th><th>Next step</th></tr>
+<tr><td>80–100</td><td>Strong, consistent brand. Gains now come from distinctiveness and reach.</td><td>Invest in signature assets and brand campaigns.</td></tr>
+<tr><td>55–79</td><td>Solid foundations with visible gaps — usually consistency or documentation.</td><td>Write a brand guide; fix your weakest two pillars.</td></tr>
+<tr><td>30–54</td><td>Emerging brand. Customers may like you but can’t describe you.</td><td>Clarify positioning before spending on design.</td></tr>
+<tr><td>0–29</td><td>Brand at risk: legal, naming or positioning issues could be costly.</td><td>Start with trademarks and a positioning sentence.</td></tr></table>
+<h3>Why these eight pillars?</h3>
+<p>They mirror how professional studios run discovery: strategy first (positioning, name), expression second (visual identity, voice), delivery third (website, consistency, experience) and finally measurement. Fixing expression before strategy is the most common — and most expensive — branding mistake.</p>
+<p>Want help with the gaps? <a href="/get-matched.html">Get matched with a brand strategist</a> or start with the <a href="/guides/brand-strategy-template.html">brand strategy template</a>.</p>
+</div></section>
