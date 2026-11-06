@@ -1,0 +1,44 @@
+---
+title: "Free Business Name Generator — Brandable Names & Domain Ideas | Brand.Studio"
+description: "Generate brandable business names from your keywords. Eight naming styles, memorability scores, shortlist, and one-click domain and trademark checks. Free, no sign-up."
+js: tools.js
+schema: '{"@context":"https://schema.org","@type":"WebApplication","name":"Brand.Studio Business Name Generator","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://brand.studio/tools/name-generator.html"}'
+---
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Tool · Naming</span><h1>Business name generator</h1><p class="lead">Enter one to three keywords, pick naming styles and a vibe. Shortlist your favourites, then check domains and trademarks in one click.</p></div></section>
+<section style="padding-top:0"><div class="wrap tool-shell" id="nameTool">
+<div class="panel">
+<div class="field"><label for="nKw">Keywords</label><input id="nKw" value="coffee roast" placeholder="e.g. coffee roast"><span class="tiny">What you do, what you value, or an image you like.</span></div>
+<label>Naming styles</label>
+<div class="choice-grid" style="grid-template-columns:1fr 1fr">
+<label class="choice"><input type="checkbox" name="nStyle" value="compound" checked><span>Compound</span></label>
+<label class="choice"><input type="checkbox" name="nStyle" value="blend" checked><span>Blend</span></label>
+<label class="choice"><input type="checkbox" name="nStyle" value="suffix" checked><span>Suffix</span></label>
+<label class="choice"><input type="checkbox" name="nStyle" value="prefix"><span>Prefix</span></label>
+<label class="choice"><input type="checkbox" name="nStyle" value="metaphor" checked><span>Metaphor</span></label>
+<label class="choice"><input type="checkbox" name="nStyle" value="abstract" checked><span>Invented</span></label>
+<label class="choice"><input type="checkbox" name="nStyle" value="misspell"><span>Respelled</span></label>
+<label class="choice"><input type="checkbox" name="nStyle" value="phrase"><span>Two-word</span></label>
+</div>
+<div class="row"><div class="field"><label for="nVibe">Vibe</label><select id="nVibe"><option value="any">Any</option><option value="nature">Nature</option><option value="motion">Motion</option><option value="light">Light</option><option value="myth">Myth</option></select></div>
+<div class="field"><label for="nTld">Domain</label><select id="nTld"><option>.com</option><option>.co</option><option>.io</option><option>.studio</option><option>.shop</option><option>.ai</option><option>.app</option><option>.ca</option></select></div></div>
+<div class="field"><label for="nLen">Max length: <output id="nLenOut">12</output></label><input id="nLen" type="range" min="4" max="16" value="12" oninput="document.getElementById('nLenOut').textContent=this.value"></div>
+<button class="btn btn-accent btn-block" id="nGo" type="button">Generate names</button>
+<div style="margin-top:22px"><div style="display:flex;justify-content:space-between;align-items:center"><b>Shortlist (<span id="favCount">0</span>)</b><button class="btn btn-sm btn-ghost" id="copyFavs" type="button">Copy all</button></div><div id="nameFavs" class="pill-row" style="margin-top:10px"></div></div>
+</div>
+<div><div class="out-grid" id="nOut" aria-live="polite"></div><p class="tiny" style="margin-top:14px">Scores estimate memorability from length, vowel balance and letter clusters. Domain links open a registrar search; availability is confirmed there, not here. Results are suggestions only — always run trademark checks before use.</p></div>
+</div></section>
+<div class="wrap"><div class="ad-slot"></div></div>
+<section class="section-alt"><div class="wrap prose" style="max-width:860px">
+<h2>How the generator builds names</h2>
+<p>Professional naming teams work from a small set of construction patterns. The generator uses the same ones, so you can see which style suits your brand before you go deeper.</p>
+<table><tr><th>Style</th><th>How it works</th><th>Best for</th></tr>
+<tr><td>Compound</td><td>Two real words joined (keyword + evocative word).</td><td>Clear, descriptive brands that still feel ownable.</td></tr>
+<tr><td>Blend</td><td>Front of one word fused with the back of another.</td><td>Tech and consumer products that need a unique, short name.</td></tr>
+<tr><td>Suffix / prefix</td><td>Keyword plus an ending like -ly, -ify, -ora or a lead-in like Neo- or Get-.</td><td>Apps and services; easy to understand.</td></tr>
+<tr><td>Metaphor</td><td>A real word that carries the feeling you want (Summit, Lantern, Atlas).</td><td>Brands that sell an emotion more than a feature.</td></tr>
+<tr><td>Invented</td><td>Pronounceable, coined words built from consonant–vowel patterns.</td><td>Global brands that need trademark strength.</td></tr>
+<tr><td>Respelled</td><td>Familiar words with an altered spelling.</td><td>Getting a short .com — but watch the spelling cost.</td></tr></table>
+<h2>Filter your shortlist like a pro</h2>
+<ol><li><b>The radio test.</b> Say it once on a call. Could the listener spell it?</li><li><b>The crowd test.</b> Search the name with your category. Are competitors close by?</li><li><b>The meaning test.</b> Check it in the languages of your key markets for unfortunate meanings.</li><li><b>The legal test.</b> Run it through the <a href="/tools/trademark-check.html">trademark search launcher</a> in the classes you’ll trade in.</li><li><b>The domain test.</b> You don’t need the exact .com, but you need a domain people will type correctly.</li></ol>
+<p>Want the full method? Read <a href="/guides/how-to-name-a-business.html">How to name a business</a>, or <a href="/get-matched.html?service=Naming">get matched with a naming specialist</a>.</p>
+</div></section>
