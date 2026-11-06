@@ -1,0 +1,28 @@
+---
+title: "Brand Colour Palette Generator with Contrast Checker | Brand.Studio"
+description: "Create a five-colour brand palette from colour theory. Lock swatches, edit any colour, check WCAG contrast for text, and copy CSS variables. Free, no sign-up."
+js: tools.js
+---
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Tool · Colour</span><h1>Brand palette builder</h1><p class="lead">A complete five-colour system — primary, secondary, accent, light and dark — with accessibility checks built in. Press <span class="mono">space</span> to shuffle, lock what you love.</p></div></section>
+<section style="padding-top:0"><div class="wrap tool-shell" id="palTool">
+<div class="panel">
+<div class="field"><label for="pMode">Harmony</label><select id="pMode"><option value="analogous">Analogous — calm, cohesive</option><option value="complementary">Complementary — high energy</option><option value="triadic">Triadic — vibrant, playful</option><option value="split">Split complementary — balanced contrast</option><option value="mono">Monochrome — focused, premium</option><option value="earthy">Earthy — natural, muted</option></select></div>
+<div class="field"><label for="pBase">Base colour</label><input id="pBase" type="color" value="#ff4a1c"></div>
+<label class="check" style="margin-bottom:16px"><input type="checkbox" id="pRandom"> <span>Random base each time</span></label>
+<button class="btn btn-accent btn-block" id="pGo" type="button">Generate palette</button>
+<div style="display:flex;gap:8px;margin-top:10px"><button class="btn btn-ink btn-sm" id="pSave" type="button" style="flex:1">Save to kit</button><button class="btn btn-ghost btn-sm" id="pCopy" type="button" style="flex:1">Copy CSS</button></div>
+<label for="pCss" style="margin-top:16px">CSS variables</label><textarea id="pCss" class="mono" style="font-size:.8rem;min-height:150px" readonly></textarea>
+<p class="tiny">Tip: the URL updates with your palette — bookmark or share it.</p>
+</div>
+<div><div class="pal" id="pOut" aria-live="polite"></div>
+<div class="card" style="margin-top:18px;overflow:auto"><h3>Contrast check (WCAG 2.2)</h3><table class="contrast-table" id="pContrast"></table><p class="tiny" style="margin-top:10px">AA requires 4.5:1 for normal text and 3:1 for large text (24px+, or 19px+ bold).</p></div></div>
+</div></section>
+<div class="wrap"><div class="ad-slot"></div></div>
+<section class="section-alt"><div class="wrap prose" style="max-width:860px">
+<h2>How to build a brand palette that works</h2>
+<p>Most brand palettes fail for one of two reasons: too many equal-weight colours, or colours that look great as swatches but can’t carry readable text. A working palette has <b>roles</b>, not just colours.</p>
+<ul><li><b>Primary</b> — the colour people should associate with you. It appears on your logo, key buttons and hero moments.</li><li><b>Secondary</b> — a supporting tone for backgrounds, illustrations and charts.</li><li><b>Accent</b> — used sparingly to draw the eye: badges, highlights, sale labels.</li><li><b>Light</b> — your page background. Rarely pure white; a slightly warm or cool off-white feels intentional.</li><li><b>Dark</b> — your text colour. Rarely pure black; a deep tinted neutral is softer and more on-brand.</li></ul>
+<h3>The 60-30-10 rule</h3><p>Roughly 60% neutral (light/dark), 30% primary or secondary, 10% accent. It keeps layouts calm and makes the accent do its job.</p>
+<h3>Accessibility is not optional</h3><p>About one in twelve men has some form of colour-vision deficiency, and low-contrast text is harder for everyone on a phone in sunlight. The contrast table above tells you which pairings are safe for body copy. If your primary fails against your light colour, use it for shapes and buttons with dark text, not for paragraphs.</p>
+<p>Go deeper in <a href="/guides/brand-colour-psychology.html">Brand colour psychology</a>, then set your type in the <a href="/tools/fonts.html">font pairing tool</a>.</p>
+</div></section>
