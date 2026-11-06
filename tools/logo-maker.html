@@ -1,0 +1,32 @@
+---
+title: "Free Wordmark Logo Maker — Export SVG & PNG | Brand.Studio"
+description: "Make a clean typographic logo in your browser. Choose from 48 free fonts, add a simple symbol, set spacing and colours, preview a favicon and export SVG or PNG."
+js: tools.js
+---
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Tool · Logo</span><h1>Wordmark maker</h1><p class="lead">Many of the strongest logos are just a name set beautifully. Build a typographic wordmark, add a simple symbol if it earns its place, and export production-ready files.</p></div></section>
+<section style="padding-top:0"><div class="wrap tool-shell" id="logoTool">
+<div class="panel">
+<div class="field"><label for="lText">Brand name</label><input id="lText" value="Northwind" maxlength="30"></div>
+<div class="field"><label for="lTag">Tagline (optional)</label><input id="lTag" value="" maxlength="60" placeholder="e.g. Coffee, roasted right"></div>
+<div class="row"><div class="field"><label for="lFont">Font</label><select id="lFont"></select></div><div class="field"><label for="lWeight">Weight</label><select id="lWeight"><option value="700">Bold</option><option value="400">Regular</option></select></div></div>
+<div class="row"><div class="field"><label for="lCase">Case</label><select id="lCase"><option value="none">As typed</option><option value="upper">UPPERCASE</option><option value="lower">lowercase</option></select></div><div class="field"><label for="lLayout">Layout</label><select id="lLayout"><option value="row">Symbol left</option><option value="stack">Stacked</option></select></div></div>
+<div class="field"><label for="lShape">Symbol</label><select id="lShape"><option value="none">None (pure wordmark)</option><option value="circle">Circle</option><option value="ring">Ring</option><option value="square">Rounded square</option><option value="diamond">Diamond</option><option value="triangle">Triangle</option><option value="arch">Arch</option><option value="spark">Spark</option><option value="half">Split circle</option><option value="slash">Slash</option><option value="dot">Dot</option></select></div>
+<div class="row"><div class="field"><label for="lSpace">Letter spacing</label><input id="lSpace" type="range" min="-4" max="24" value="0"></div><div class="field"><label for="lSize">Size</label><input id="lSize" type="range" min="40" max="140" value="84"></div></div>
+<div class="row" style="grid-template-columns:1fr 1fr 1fr"><div class="field"><label for="lFg">Text</label><input id="lFg" type="color" value="#15130f"></div><div class="field"><label for="lSym">Symbol</label><input id="lSym" type="color" value="#ff4a1c"></div><div class="field"><label for="lBg">Background</label><input id="lBg" type="color" value="#f4f0e8"></div></div>
+<label class="check" style="margin-bottom:16px"><input type="checkbox" id="lTransparent"> <span>Transparent background</span></label>
+<div class="grid" style="grid-template-columns:1fr 1fr;gap:8px"><button class="btn btn-accent btn-sm" id="lSvg" type="button">Download SVG</button><button class="btn btn-ink btn-sm" id="lPng" type="button">Download PNG</button></div>
+<button class="btn btn-ghost btn-sm btn-block" id="lSave" type="button" style="margin-top:8px">Save to brand kit</button>
+</div>
+<div><div class="canvas-wrap" id="lCanvas" aria-live="polite"></div>
+<div class="card" style="margin-top:18px;display:flex;gap:18px;align-items:center"><div id="lFav"></div><div><b>Favicon preview</b><p class="tiny" style="margin:0">Your first letter on your symbol colour, as it would appear in a browser tab or app icon.</p></div></div>
+<p class="tiny" style="margin-top:12px">The SVG references Google Fonts so it renders correctly in browsers. For print or design software, install the font or convert text to outlines. PNG exports at 3× resolution.</p></div>
+</div></section>
+<div class="wrap"><div class="ad-slot"></div></div>
+<section class="section-alt"><div class="wrap prose" style="max-width:860px">
+<h2>What makes a wordmark work</h2>
+<p>A wordmark is a logo made primarily of the brand name. It’s the fastest route to recognition for a new brand because every impression teaches people your name — not an abstract symbol they have to learn.</p>
+<ul><li><b>Legibility first.</b> Test at 120px wide and at favicon size. If it breaks small, simplify.</li><li><b>Spacing is the craft.</b> Tight spacing feels confident and modern; open spacing feels premium and calm. Uppercase usually needs extra tracking.</li><li><b>One colour must work.</b> Your logo will be stamped, embroidered and printed in black. Design in one colour, then add colour.</li><li><b>Symbols must earn their place.</b> A simple shape can become a favicon, app icon and social avatar. If it adds nothing, leave it out.</li></ul>
+<h3>Files you’ll need</h3>
+<table><tr><th>File</th><th>Use</th></tr><tr><td>SVG</td><td>Website, presentations, scalable to any size.</td></tr><tr><td>PNG (transparent)</td><td>Documents, social media, email signatures.</td></tr><tr><td>One-colour version</td><td>Stamps, embroidery, single-colour print.</td></tr><tr><td>Square icon</td><td>Favicon, app icon, social avatars.</td></tr></table>
+<p>A browser wordmark is a strong starting point. A professionally drawn logo with custom lettering is a different level — compare options in <a href="/guides/logo-design-cost.html">How much does a logo cost?</a> or <a href="/get-matched.html?service=Logo+%26+visual+identity">get matched with identity designers</a>.</p>
+</div></section>
